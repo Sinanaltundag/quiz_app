@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     "corsheaders",
+    'rest_framework.authtoken',
+    'dj_rest_auth',
     # Local apps:
     'users',
     'quiz',
