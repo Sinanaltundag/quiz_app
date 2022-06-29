@@ -48,4 +48,5 @@ urlpatterns = [
 # End of url paths for swagger.
     path('__debug__/', include('debug_toolbar.urls')),
     path("users/", include("users.urls")),
+    path("quiz/", include("quiz.urls")),
 ]
