@@ -49,4 +49,5 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     path("users/", include("users.urls")),
     path("quiz/", include("quiz.urls")),
+    path('_nested_admin/', include('nested_admin.urls')),
 ]
