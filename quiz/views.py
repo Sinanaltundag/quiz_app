@@ -32,18 +32,6 @@ class QuestionMVS(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
 
-    @action(detail=True, methods=['get'])
-    def get_question_by_quiz(self, request, *args, **kwargs):
-        quiz = request.query_params.get('quiz')
-        if quiz:
-            queryset = Question.objects.filter(quiz=quiz)
-        else:
-            queryset = Question.objects.all()
-        serializer = QuestionSerializer(queryset, many=True)
-        return Response(serializer.data)
-
-
-
 class QuizListCreateView(ListCreateAPIView):
     queryset = Quiz.objects.all()
     serializer_class = QuizSerializer

@@ -10,8 +10,8 @@ router.register(r'question', QuestionMVS)
 
 
 urlpatterns = [
-    path('<str:category>', QuizListCreateView.as_view()),
-    path('<str:category>/<str:quiz>', QuestionListCreateView.as_view()),
+    path('<str:category>/', QuizListCreateView.as_view()),
+    path('<str:category>/<str:quiz>/', QuestionListCreateView.as_view()),
 ]
 
 urlpatterns += router.urls
