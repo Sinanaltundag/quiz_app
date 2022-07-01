@@ -26,4 +26,4 @@ INTERNAL_IPS = [
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quiz-app-s.herokuapp.com']
