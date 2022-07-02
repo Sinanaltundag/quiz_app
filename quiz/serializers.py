@@ -35,10 +35,10 @@ class QuizSerializer(serializers.ModelSerializer):
         quiz = Quiz.objects.create(**validated_data)
         for question in questions:
             answers = question.pop('answers')
-            Question.objects.create(quiz=quiz, **question)
+            questionNew=Question.objects.create(quiz=quiz, **question)
             for answer in answers:
                 # Question.objects.filter(pk=question.get('pk')).first().answers.create(**answer)
                 # Answer.objects.create(question=Question.objects.filter(pk=question.get('pk')).first(), **answer)
-                answer.question_title = question["title"]
-                Answer.objects.create(question=question, **answer)
+                # answer.question_title = question["title"]
+                Answer.objects.create(question=questionNew, **answer)
         return quiz
